@@ -1,0 +1,9 @@
+[project]
+name = "toronto-bike-sharing-analytics"
+version = "1.0.0"
+description = "Toronto Bike Sharing Analytics Dashboard"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = [".", "src"]

@@ -1,64 +1,53 @@
-# Toronto Bike Sharing Demand Prediction & Analytics
+# Toronto Bike Sharing Analytics Dashboard
 
-End-to-end data analytics and predictive modeling project analyzing Toronto bike-sharing usage patterns using regression techniques and interactive dashboards.
+End-to-end Python analytics project for exploring Toronto bike-sharing trip patterns, station usage, user behavior, and dashboard-ready operational KPIs. The project is organized in a clean portfolio format with modular source code, tests, reports, figures, and a Streamlit dashboard.
 
 ---
 
 ## Project Overview
 
-This project analyzes bike-sharing demand in Toronto to identify usage patterns and build predictive models for ride demand.
+This project analyzes bike-sharing trip data to help understand ridership behavior, station demand, trip duration patterns, user type differences, and operational usage trends.
 
-The analysis combines exploratory data analysis, feature engineering, regression modeling, and business insights to support operational decision-making.
+The project was converted into a portfolio-ready GitHub repository using a production-style structure similar to a capstone analytics project. It includes reusable Python modules, test coverage, technical documentation, and an interactive Streamlit application.
 
 ---
 
 ## Business Problem
 
-Bike-sharing systems require accurate demand forecasting to:
+Bike-sharing operators need reliable insights to improve service availability, station planning, and customer experience. Without data-driven monitoring, operators may face bike shortages, uneven station usage, poor rebalancing decisions, and reduced rider satisfaction.
 
-* Optimize bike availability
-* Improve station distribution
-* Reduce shortages and idle capacity
-* Enhance user experience
+This project addresses the following business questions:
+
+- Which stations generate the highest trip volume?
+- What are the main usage patterns by user type?
+- How long are typical trips?
+- When does bike demand peak?
+- What KPIs should operators monitor for daily decision-making?
 
 ---
 
 ## Objectives
 
-* Analyze historical bike-sharing usage patterns
-* Identify key drivers of demand (time, weather, seasonality)
-* Build predictive models for ride demand
-* Provide actionable business insights
+- Build a reusable analytics pipeline for bike-sharing trip data
+- Clean and process trip-level records
+- Generate operational KPIs for dashboard reporting
+- Analyze station usage, user types, trip duration, and peak demand
+- Create a Streamlit dashboard for interactive exploration
+- Add tests to support reliability and maintainability
 
 ---
 
-## Key Insights
+## Key Features
 
-* Demand peaks during **rush hours (morning & evening)**
-* Weather significantly impacts usage (temperature, rain)
-* Seasonal patterns show higher usage in warmer months
-* Weekdays and weekends show distinct usage behavior
-
----
-
-## Modeling Approach
-
-* Feature Engineering:
-
-  * Hour, day, month
-  * Temperature, humidity
-  * Seasonal indicators
-
-* Models:
-
-  * Linear Regression
-  * Random Forest
-  * XGBoost
-
-* Evaluation Metrics:
-
-  * RMSE
-  * R² Score
+- Data loading and cleaning utilities
+- Trip duration analysis
+- Station usage ranking
+- User type breakdown
+- Peak usage analysis
+- KPI calculation module
+- Interactive dashboard filters
+- Reusable visualization functions
+- Unit tests for analytics and processing modules
 
 ---
 
@@ -70,19 +59,40 @@ Run locally:
 streamlit run app/Home.py
 ```
 
+Dashboard pages:
+
+- Home: project overview and KPI summary
+- EDA: trip patterns, duration distribution, and user mix
+- Station Usage: top start stations and demand concentration
+- User Type Analysis: annual vs casual member behavior
+- Operational Insights: recommendations for operators
+
 ---
 
 ## Project Structure
 
-```
+```text
 toronto-bike-sharing-analytics/
-├── app/
-├── src/
-├── data/
-├── figures/
-├── reports/
-├── tests/
-├── notebooks/
+│
+├── app/                 # Streamlit dashboard
+│   ├── Home.py
+│   ├── pages/
+│   └── utils/
+│
+├── src/                 # Core analytics and processing modules
+│   ├── analytics/
+│   ├── data_processing/
+│   ├── utils/
+│   └── visualization/
+│
+├── data/                # Sample, raw, and processed data
+├── figures/             # Exported charts and dashboard figures
+├── reports/             # Technical documentation
+├── tests/               # Unit tests
+├── examples/            # Example scripts
+│
+├── requirements.txt
+├── pytest.ini
 └── README.md
 ```
 
@@ -90,25 +100,50 @@ toronto-bike-sharing-analytics/
 
 ## Tools and Technologies
 
-* Python (Pandas, NumPy, Scikit-learn, XGBoost)
-* Matplotlib, Seaborn
-* Streamlit
-* Data preprocessing and modeling techniques
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Plotly
+- Streamlit
+- Pytest
+
+---
+
+## How to Run
+
+```bash
+git clone https://github.com/your-username/toronto-bike-sharing-analytics.git
+cd toronto-bike-sharing-analytics
+
+pip install -r requirements.txt
+streamlit run app/Home.py
+```
+
+Run tests:
+
+```bash
+python -m pytest -q
+```
 
 ---
 
 ## Key Takeaways
 
-* Demand is highly time-dependent (hour + season)
-* Weather is a critical influencing factor
-* Predictive models can significantly support operations
-* Data-driven insights improve resource allocation
+- Bike-sharing demand is highly dependent on station location and time-based usage patterns
+- User type analysis helps separate commuter-style usage from casual riding behavior
+- Trip duration metrics support operational monitoring and anomaly detection
+- Dashboard KPIs help translate raw trip records into practical business insights
 
 ---
 
 ## Author
 
-Roberto Alberto San Miguel
+Roberto Alberto San Miguel  
 Master of Data Analytics – Niagara Falls University
 
 ---
+
+## Portfolio Note
+
+This project demonstrates practical skills in data processing, exploratory analysis, dashboard development, modular Python design, and test-driven analytics workflows.
